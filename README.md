@@ -1,5 +1,7 @@
 # Front-End-Wed-Desing-e-commerce-
 
+la pagina HOME es : spacetech-ecomerce.html
+
 Video version WED y MOVILE: 
 https://drive.google.com/drive/folders/1eK59lzpQMFSWK4zYF1NO2jCs2LaC-z9x?usp=sharing
 
