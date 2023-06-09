@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>[SpaceTech] E-commerce</title>
+
+    <!-- css del carousel -->
+    <link rel="stylesheet" href="./carousel.css">
+
+    <!-- CDN de css de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- css del nav y el background o el header -->
+    <link rel="stylesheet" href="./stylos.css">
+
+    <!-- css de los botones -->
+    <link rel="stylesheet" href="./boton_animacion.css">
+
+    <!-- icono de la pagina -->
+    <link rel="shortcut icon" href="./assets/logo.png">
+
+    <!-- CDN de css de Glider para la funcionalidad del carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css">
+
+    <!-- js del carousel -->
+    <script type="text/javascript" src="./carousel.js"></script>
+</head>
+
+<body>
+    <!-- barra de navegacion -->
+    <header>
+        <nav>
+            <div>
+                <nav class="navbar navbar-expand-lg shadow-sm">
+
+                    <!-- para que la barra de navegacion ocupe toda la pantalla -->
+                    <div class="container-fluid">
+
+                        <div>
+                            <a class="navbar-brand" href="">
+                                <img src="./assets/logotipo.png" id="img" alt="" class="d-inline-block align-text-top ">
+                            </a>
+                        </div>
+
+                        <!-- el boton que sale cuando encogemos la pantalla -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- enlace a las demas paginas con la funcionalidad collapse para que cuando se encoja la pantalla se guarde -->
+                        <div class="collapse navbar-collapse justify-content-end nav-underline" id="navbarNav">
+                            <ul class="navbar-nav fw-semibold">
+                                <li class="nav-item" id="nav-end">
+                                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item" id="nav-end">
+                                    <a class="nav-link" href="shop.html">Shop</a>
+                                </li>
+                                <li class="nav-item" id="nav-end">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item" id="nav-end">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <!-- slider principal -->
+    <section>
+        <div class="slider_principal">
+            <!-- slider principal -->
+            <div id="slider_one" class="carousel slide">
+                <!-- indicadores de abajo -->
+                <div class="carousel-indicators">
+
+                    <button type="button" data-bs-target="#slider_one" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+
+                    <button type="button" data-bs-target="#slider_one" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+
+                    <button type="button" data-bs-target="#slider_one" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+
+                    <button type="button" data-bs-target="#slider_one" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/p4.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/p5.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/p6.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/p7.webp" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#slider_one" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#slider_one" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- slider de productos -->
+    <section>
+        <div class="container">
+            <p class="h2 p-4 text-center">Best Selling</p>
+
+            <!-- div que contendra todo el codigo del carousel -->
+            <div class="carousel box_carrusel">
+                <div class="carousel__contenedor">
+                    <!-- boton prev -->
+                    <button aria-label="Prev" class="carousel__anterior">
+                        <!-- icono del boton -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left-circle-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg>
+                    </button>
+
+                    <!-- la lista de elementos del carousel -->
+                    <div class="carousel__lista">
+
+                        <!-- 1 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/cooler.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">liquid CPU cooler</p>
+                                <p class="titulo2 ">ROG RYUJIN III 240 ARGB White Edition</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">liquid CPU cooler with 3.5" LCD</li>
+                                    <li class="list-group-item">Asetek 8th gen pump</li>
+                                    <li class="list-group-item">pump embedded fan</li>
+                                    <li class="list-group-item">ROG 120mm radiator</li>
+                                    <li class="list-group-item">magnetic daisy-chainable ARGB fans</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/laptop.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">Laptop Gamer</p>
+                                <p class="titulo2 ">ProArt Studiobook 16 3D OLED (H7604)</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">3th Gen Intel® Core™ i9 HX</li>
+                                    <li class="list-group-item">NVIDIA® GeForce RTX™ 4070</li>
+                                    <li class="list-group-item">16-inch 3.2K 120 Hz 3D OLED</li>
+                                    <li class="list-group-item">ASUS Spatial Vision</li>
+                                    <li class="list-group-item">Windows 11 Pro</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/consola.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">Portatil Console</p>
+                                <p class="titulo2 ">ROG Ally (2023) RC71L</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">AMD Ryzen™ Z1 Extreme</li>
+                                    <li class="list-group-item">AMD Radeon™ Graphics</li>
+                                    <li class="list-group-item">FHD (1920 x 1080) 16:9</li>
+                                    <li class="list-group-item">16GB LPDDR5 on board</li>
+                                    <li class="list-group-item">Windows 11 Home</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/laptop2.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">Laptop Gamer</p>
+                                <p class="titulo2 ">ASUS Zenbook Pro 16X OLED (UX7602)</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">3th Gen Intel® Core™ i9 HX</li>
+                                    <li class="list-group-item">NVIDIA® GeForce RTX™ 4070</li>
+                                    <li class="list-group-item">16-inch 3.2K 120 Hz 3D OLED</li>
+                                    <li class="list-group-item">ASUS Spatial Vision</li>
+                                    <li class="list-group-item">Windows 11 Pro</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/case.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">Desktops</p>
+                                <p class="titulo2 ">ROG STRIX G35CA</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">GeForce RTX™ 3090</li>
+                                    <li class="list-group-item">13th Intel® Core™ i9</li>
+                                    <li class="list-group-item">64GB DDR5 U-DIMM (16G 4800 x 4)</li>
+                                    <li class="list-group-item">1TB Gen4 Performance PCIe SSD *2+ 2TB</li>
+                                    <li class="list-group-item">Windows 11 Pro</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/keyboard.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">Keyboard</p>
+                                <p class="titulo2 ">ROG Claymore II</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">ROG Claymore II modular TKL 80%/100%</li>
+                                    <li class="list-group-item">ROG RX Optical Mechanical Switches</li>
+                                    <li class="list-group-item">wired & wireless 2.4G modes</li>
+                                    <li class="list-group-item">wireless Aura Sync</li>
+                                    <li class="list-group-item">Intuitive Control</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/headset.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">WIRELESS HEADSETS</p>
+                                <p class="titulo2 ">ROG Delta S Wireless</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">Lightweight wireless</li>
+                                    <li class="list-group-item">gaming headset with 2.4 GHz</li>
+                                    <li class="list-group-item">Bluetooth connectivity</li>
+                                    <li class="list-group-item">50 mm ASUS</li>
+                                    <li class="list-group-item">AI Beamforming Microphones</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/monitor.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">Monitor</p>
+                                <p class="titulo2 ">ROG Swift OLED PG48UQ</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">47.5-inch 4K</li>
+                                    <li class="list-group-item">OLED, 138Hz (overclocked)</li>
+                                    <li class="list-group-item">0.1 ms (GTG)</li>
+                                    <li class="list-group-item">G-SYNC® compatible</li>
+                                    <li class="list-group-item">anti-glare micro-texture coating</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9 -->
+                        <div class="carousel__elemento">
+                            <img class="mx-auto d-block" src="./assets/carrusel/STOCK/control.png" alt="">
+
+                            <div class="details_carousel">
+                                <p class="titulo fst-italic">Controller</p>
+                                <p class="titulo2 ">ROG Raikiri Pro</p>
+                                <p><small>$999.99</small> $799.99</p>
+                                <p class="saveDiscount text-center rounded fst-italic">$200 OFF</p>
+                                <ul class="list-group m-2 list-group-flush">
+                                    <li class="list-group-item">tri-mode connectivity</li>
+                                    <li class="list-group-item">selectable step triggers</li>
+                                    <li class="list-group-item">plus adjustable joystick sensitivity</li>
+                                    <li class="list-group-item">response curves</li>
+                                    <li class="list-group-item">built-in OLED display</li>
+                                </ul>
+
+                                <!-- boton de comprar -->
+                                <div class="text-center p-1 d-grid gap-2 col-6 mx-auto">
+                                    <button type="button" class="btn btn2 fw-semibold" onclick="buyBtn2()">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- boton next -->
+                    <button aria-label="Next" class="carousel__siguiente">
+                        <!-- icono del boton -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- esto es para el conteo de las img del carousel, se ponen con js -->
+                <div role="tablist" class="carousel__indicadores"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- caracteristicas de la home page -->
+    <section>
+        <!-- tres imagenes -->
+        <div class="container-fluid img-contenedor">
+            <div class="row image-container">
+                <div class="image-container_02 col">
+
+                    <img src="./assets/sound.jpg" class="img-fluid" alt="Imagen 1">
+
+                    <div class="texto_img">
+                        <p class="text-center off">GREAT SOUND</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="./assets/top.webp" class="img-fluid" alt="Imagen 2">
+                    <div class="texto_img">
+                        <p class="text-center off">ONLY THE BEST</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="./assets/special.png" class="img-fluid" alt="Imagen 3">
+                    <div class="texto_img">
+                        <p class="text-center off">NEW SPECIAL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- segundo carousel -->
+    <section>
+        <div class="container slider-box">
+            <div class="row p-4">
+                <div class="col-md-6 col-sm-6">
+                    <div id="carouselExample" class="carousel slide">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/pc1.png" class="d-block " alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/pc2.png" class="d-block " alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/pc3.png" class="d-block " alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/pc4.png" class="d-block " alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/pc5.png" class="d-block " alt="...">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text_slider">
+                    <h1><em>Limited Stock Available!</em></h1>
+                    <h3 class="text-body-secondary font-monospace fw-medium">H310m Gaming Arctic Pc Build</h3>
+                    <blockquote class="blockquote">
+                        <p>It can be fitted with an ATX motherboard, offers 7 expansion slots,
+                            and supports CPU coolers of up to 17cm height, Graphics Card length of 37 cm,
+                            and a Power Supply of 18 cm</p>
+                    </blockquote>
+
+                    <!-- boton de comprar -->
+                    <div class="text-center p-3 d-grid gap-2 col-6 mx-auto btn-content">
+
+                        <!-- en este caso vamos a generar todo en el js -->
+                        <a href="buy.html" class="btn_animated">Buy Now</a>
+
+                        <!-- <button type="button" class="btn btn-outline-info fw-semibold" ></button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segunda Presentacion -->
+    <section>
+        <div class="background_img">
+            <div class="container">
+                <div class="row">
+                    <!-- logo -->
+                    <div class="text-center col-sm-12 alto">
+                        <img src="./assets/logo.png" class="img-fluid img-principal" alt="">
+                    </div>
+                    <!-- texto principal -->
+                    <div class="text_animation">
+                        <p class="h1 text-center col-sm-12">Level Up your Gaming Experience</p>
+                    </div>
+
+                    <!-- <div class="parrafo-descartado">
+                        <div>
+                            <br><br>
+                            <p class="h5 lh-base text-center fw-semibold text-light">
+                                "The best selection of Programming products for your unique Programming experience. <br>
+                                Find the latest releases in consoles, accessories and high-quality equipment."
+                            </p>
+                        </div>
+                    </div> -->
+
+                    <!-- boton -->
+                    <div class="text-center p-4 d-grid gap-2 col-6 mx-auto">
+                        <!-- para hacer que al presionar el boton, nos mande a la pagina, hay que usar un evento onlick en el boton 
+                            y editarlo con js -->
+                        <button type="button" class="btn btn-outline-light btn1 fw-semibold" onclick="redirectToShop()">
+                            Go To Shop
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pack mega pc -->
+    <section>
+        <div class="container p-4 mega">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./assets/carrusel/STOCK/pack-silver.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="col-md-6 ">
+                    <h1 class="text-center fw-bolder">Packs Gaming</h1>
+                    <h3 class="fst-italic p-3 text-secondary">Pack Silver S</h3>
+                    <p>
+                        Bienvenido al Pack Silver "S", cuenta con teclado mecánico (solo disponible en la gama "S),
+                        fuente de alimentación exclusiva con eficiencia 80 Plus, perfecta para futuras ampliaciones,
+                        disco M.2 NVMe triplicando la velocidad del SSD del "Pack Bronze" + ratón gama alta únicos de la
+                        gama "S" en exclusiva para la web de Nitropc.
+                    </p>
+                    <p>
+                        Perfecto si tienes un presupuesto ajustado y buscas un Nitropc con todos sus accesorios para
+                        jugar en Full HD (1920x1080) a juegos actuales, e incluso los que vayan saliendo en el futuro.
+                    </p>
+
+                    <!-- boton de comprar -->
+                    <div class="text-center p-3 d-grid gap-2 col-6 mx-auto btn-content">
+
+                        <!-- en este caso vamos a generar todo en el js -->
+                        <a href="buy.html" class="btn_animated">Buy Now</a>
+
+                        <!-- <button type="button" class="btn btn-outline-info fw-semibold" ></button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- newsletter -->
+    <section>
+        <nav class="navbar newsletter">
+            <div class="container-fluid datos">
+                <a class="navbar-brand fw-bolder">SUBSCRIBE TO OUR NEWSLETTER</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" size="90" type="search" placeholder="Write your Email"
+                        aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit" onclick="alert('No funciona, Por el momento')">SUBSCRIBE</button>
+                </form>
+            </div>
+        </nav>
+    </section>
+
+    <!-- final de la pagina : https://getbootstrap.com/docs/5.2/examples/footers/ -->
+    <footer>
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Conócenos</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Trabaja en
+                                    SpaceTech</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Acerca de
+                                    SpaceTech</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Dispositivos
+                                    SpaceTech</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Gana Dinero con Nosotros</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Vender productos en
+                                    SpaceTech</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Programa de
+                                    Afiliados</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Anuncia tus
+                                    Productos</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Publica tu Libro en
+                                    SpaceKindle</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Habilita un SpaceTech
+                                    Hub</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Podemos Ayudarte</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">SpaceTech y el
+                                    COVID-19</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tu Cuenta</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tus Pedidos</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tarifas de Envío y
+                                    Políticas</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ayuda</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                            <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
+                            <p>Monthly digest of what's new and exciting from us.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Write your Email">
+                                <button class="btn btn2 fw-semibold" type="button" onclick="alert('No funciona, Por el momento')">SUBSCRIBE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2022 Company, Inc. All rights reserved to SpaceTech.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#twitter"></use>
+                                </svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#instagram"></use>
+                                </svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#facebook"></use>
+                                </svg></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <section>
+        <!-- js del carousel -->
+        <script src="./carousel.js"></script>
+
+        <!-- CDN de js de Glider para la funcionalidad del carousel -->
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
+
+        <!-- CDN de js de bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+.carousel__contenedor {
+    /* para poder mover los botones a libertad, es decir, los botones se aderiran al carrousel con un position: absolute */
+    position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+    /* para que adiera al carousel */
+    position: absolute;
+    /* para que se le pueda poner un ancho y un alto */
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    /* con la funcion TOP, vamos a calcular el 50% del P y el M*/
+    top: calc(50%);
+    cursor: pointer;
+    /* size del alto del boton */
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: rgb(0, 0, 0);
+    opacity: 20%;
+}
+
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+    opacity: 100%;
+}
+
+/* los botones no se ven por si solos, ya que estan con un position absolute al contenido del carrusel, lo sacamos con right y left */
+.carousel__anterior {
+    left: -30px;
+}
+
+.carousel__siguiente {
+    right: -30px;
+}
+
+/* esto es para ocultar los botones cuando la pantalla llegue a 800px */
+@media (max-width: 800px) {
+
+    .carousel__anterior,
+    .carousel__siguiente {
+        display: none;
+    }
+}
+
+/* ahora vamos a darle estilos a los indicadores, para eso buscamos la clase del div de indicadores y ese indicador por la consola */
+
+.carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: black;
+    opacity: .2;
+    border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+    opacity: 1;
+}
+
+
+/* configuracion de los elementos dentro del carousel */
+
+.carousel__lista p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 6px;
+    padding: 3px;
+}
+
+.carousel__lista p small {
+    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
+    opacity: 80%;
+}
+
+.titulo {
+    opacity: 60%;
+}
+
+.titulo2 {
+    font-weight: bold;
+}
+
+.saveDiscount {
+    color: aliceblue;
+    font-weight: bold;
+    background-color: rgb(255, 0, 0);
+}
+
+.carousel__lista img {
+    width: 200px;
+    height: auto;
+}
+
+.carousel__lista .btn-outline-info:hover {
+    background-color: cyan;
+    border-color: cyan;
+}
+
+.carousel__lista .carousel__elemento {
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.171);
+}
+
+.box_carrusel {
+    margin: -20px 0px;
+}

@@ -1,0 +1,123 @@
+/* en este caso vamos a importar una fuente para el boton */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+/* se usa para aplicar estilos a toda la pagina atraves de declarar variables */
+:root {
+    /* esta es la forma de declarar una variable, para usarla debes usar var(--font); */
+    --font: 'Montserrat', sans-serif;
+
+    --bg-color: #ffffff;
+
+    /* colores que usaremos para el gradiente */
+    /* --conic-gradient: conic-gradient(#FF2E2E,
+            #FF831E,
+            #FCFF51,
+            #58FF57,
+            #575FFF,
+            #D257FF,
+            #FF57E5,
+            #FF1556); */
+
+    --conic-gradient: conic-gradient(rgb(2, 255, 255),
+            #1e9aff,
+            #519cff,
+            #2142ff,
+            #161aff,
+            #57c1ff,
+            #2de0ff);
+}
+
+/* Boton estilos */
+
+.btn-content {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--font);
+
+    justify-content: center;
+}
+
+.btn_animated {
+    /* background-color: #FF2E2E; (ESTO ERA PARA VER EL BOTON)*/
+    width: 16em;
+    height: 4em;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.39);
+
+    position: relative;
+
+    /* esto es para ocultar el fondo */
+    overflow: hidden;
+    cursor: pointer;
+
+    /* esto es para la transicion con el hover, las trancisiones las debe llevar el btn principal */
+    transition: box-shadow, transform .3s ease;
+}
+
+/* before es para agregar elementos al html sin usar una etiqueta */
+.btn_animated::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 350%;
+    background: var(--conic-gradient);
+
+    /* estos codigos es para poder moverl el background gradiente del boton */
+    display: flex;
+    top: -122px;
+    left: -14px;
+}
+
+/* after se usa para agregar contenido adicional al ya creado */
+.btn_animated::after {
+    /* esto creara un texto dentro del boton */
+    content: 'Buy Now';
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    background-color: var(--bg-color);
+
+    /* estos codigos son para mover el texto dentro */
+    display: flex;
+    top: 8.5%;
+    left: 2.5%;
+
+    width: 95%;
+    height: 83%;
+
+    border-radius: .4em;
+
+    font-size: 1.8rem;
+    color: #000000;
+    font-weight: bold;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_animated:hover {
+    /* esto se usa para escalar un objeto a una medida establecida */
+    transform: scale(1.1);
+
+    box-shadow: 0 0 20px rgb(0, 153, 255);
+}
+
+.btn_animated:hover::before {
+    /* spin es el nombre de la animacion */
+    /* 1.5s es el tiempo */
+    /* infinite es el intervalo de tiempo */
+    /* linear es que avanzara sin detenerse */
+    /* cuando se usa animation, se debe usar keyframe */
+    animation: spin 1.5s infinite linear;
+}
+
+/* llamamos a la animacion */
+@keyframes spin {
+
+    /* especificamos */
+    to {
+        /* accion que hara */
+        transform: rotate(360deg);
+    }
+}
