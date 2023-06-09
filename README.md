@@ -2,7 +2,7 @@
 
 la pagina HOME es : spacetech-ecomerce.html
 
-Video version WED y MOVILE: 
+Video version WED y MOBILE: 
 https://drive.google.com/drive/folders/1eK59lzpQMFSWK4zYF1NO2jCs2LaC-z9x?usp=sharing
 
 NOTAS IMPORTANTES
